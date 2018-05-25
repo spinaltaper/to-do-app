@@ -1,14 +1,16 @@
 import React from 'react';
 import autoBind from './../../utils';
 
+const emptyExpenseFormState={
+  title: '',
+  price: 0,
+};
+
 export default class ExpenseForm extends React.component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      title: '',
-      price: 0,
-    };
+    this.state = this.props.expense ? this.props.expense : emptyExpenseFormState
 
     autoBind.call(this, ExpenseForm);
   }
@@ -47,4 +49,9 @@ export default class ExpenseForm extends React.component {
             </form>
     );
   }
+}
+
+ExpenseForm.propTypes = {
+  expense: PropTypes.object,
+  handleComplete: PropTypes.func,
 }

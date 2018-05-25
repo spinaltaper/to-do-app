@@ -4,8 +4,8 @@ import Dashboard from '../dashboard/index';
 import '../../styles/main.scss';
 
 export default class App extends React.Component {
-    render() {
-        return (
+  render() {
+    return (
             <div className="app">
                 <BrowserRouter>
                     <div>
@@ -21,7 +21,7 @@ export default class App extends React.Component {
                         <Route
                             exact
                             path="/"
-                            component={()=><h1>This is the landing page</h1>}
+                            component={() => <h1>This is the landing page</h1>}
                         />
                         <Route
                         exact
@@ -31,6 +31,6 @@ export default class App extends React.Component {
                     </div>
                 </BrowserRouter>
             </div>
-        );
-    }
+    );
+  }
 }
