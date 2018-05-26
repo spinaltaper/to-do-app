@@ -1,5 +1,6 @@
 import React from 'react';
 import autoBind from './../../utils';
+import PropTypes from 'prop-types';
 
 const emptyExpenseFormState={
   title: '',
